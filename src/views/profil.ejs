@@ -1,0 +1,27 @@
+<div class="wrapper bg-white mt-sm-5">
+    <h4 class="pb-4 border-bottom">Profil sayfasi</h4>
+    <form action="/yonetim/profil-guncelle" method="POST" enctype="multipart/form-data">
+    <div class="d-flex align-items-start py-3 border-bottom">
+        <img src="/uploads/avatars/<%- user.avatar  %> " class="img" style="border-radius: 50%;" alt="" height="200" width="200">
+        <div class="pl-sm-4 pl-2" id="img-section"> <b>Profile Photo</b>
+            <p>Accepted file type .png. Less than 1MB</p> <input name="avatar" type="file" class="btn button border"></input>
+        </div>
+    </div>
+    <div class="py-2">
+        <div class="row py-2">
+            <div class="col-md-6"> <label for="firstname">Adınız</label> <input type="text"name="name" value=" <%- user.name  %> " class="bg-light form-control"> </div>
+            <div class="col-md-6 pt-md-0 pt-3"> <label for="lastname">Soyadınız</label> <input name="surname" type="text" value="<%- user.surname  %>"  class="bg-light form-control" > </div>
+        </div>
+        <div class="row py-2">
+            <div class="col-md-6"> <label for="email">Email adresiniz</label> <input name="email" type="text"  value="<%- user.email  %>"  class="bg-light form-control"  > </div>
+            <div class="col-md-6 pt-md-0 pt-3"> <label for="email">Kayıt Tarihiniz</label> <input type="text" value="<%- user.createdDate  %>"  class="bg-light form-control"  disabled> </div>
+
+        </div>
+       
+         
+        </div>
+        <div class="py-3 pb-4 border-bottom"> <button class="btn btn-primary mr-3" type="submit">Profili Güncelle</button> 
+        </form>
+            <button class="btn border button">İptal</button> </div>
+      
+    </div>
